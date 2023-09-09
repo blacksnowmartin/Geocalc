@@ -1,0 +1,30 @@
+Usage
+Go to Google My Maps and create a custom map.
+
+Outline the area you want to measure using the drawing tools available in Google My Maps.
+
+Save your map, and then export it as a KML file. To do this, click on the three dots (menu) next to your map's name, then select "Export to KML/KMZ."
+
+Clone or download this repository to your local machine.
+
+In the terminal, navigate to the directory where you have cloned/downloaded this repository.
+
+Run the following command, replacing "path/to/your/exported.kml" with the actual path to your exported KML file:
+
+bash
+Copy code
+python calculate_area.py path/to/your/exported.kml
+This script will read the KML file and calculate the approximate area in square kilometers.
+
+Example
+bash
+Copy code
+python calculate_area.py path/to/your/exported.kml
+Note
+The program provides an approximation of the area, and the accuracy may vary depending on the complexity of the outlined area and the projection used in the KML file.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Acknowledgments
+geopandas - Python library for geospatial data operations
+Feel free to contribute to this project or report any issues you encounter. If you have any questions or suggestions, please don't hesitate to reach out.
