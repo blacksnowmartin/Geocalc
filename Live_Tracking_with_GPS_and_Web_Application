@@ -1,0 +1,23 @@
+# Python program for live tracking with Flask
+from flask import Flask, render_template
+import gpsd
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    # Connect to the local gpsd service
+    gpsd.connect()
+
+    # Get the current GPS location
+    packet = gpsd.get_current()
+
+    # Pass the location data to the HTML template
+    return render_template('index.html', latitude=packet.latitude, longitude=packet.longitude)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+#In this program, Flask is used to create a simple web application that displays the current GPS location on a webpage. You'll also need an HTML template (e.g., index.html) to render the location data.
+
+#For a more robust live tracking system, you can consider using a database to store location history, implementing user authentication, and adding features like real-time updates using WebSockets.
