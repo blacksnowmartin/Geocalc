@@ -1,6 +1,6 @@
 # Geocalc
 
-This Python program allows you to calculate the approximate area of a region outlined on Google My Maps by exporting it as a KML file.
+This Python program plus Javasript and html files that allows you to calculate the approximate area of a region outlined on Google My Maps by exporting it as a KML file.
 
 ## Getting Started
 
